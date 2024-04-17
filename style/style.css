@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -13,7 +14,7 @@ header {
 header .logo h3 {
   font-family: "Pacifico", sans-serif;
   font-weight: 400;
-  font-size: 1.7em;
+  font-size: 1.3em;
   color: white;
 }
 header .nav-list ul {
@@ -26,14 +27,14 @@ header .nav-list ul li {
 header .nav-list ul li a {
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
 }
 
 main {
   font-family: "Poppins", serif;
   background-color: #e0a25a;
-  height: 90vh;
+  height: 76vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,17 +49,17 @@ main .content .content-detail {
   width: 65%;
 }
 main .content .content-detail h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 main .content .content-detail p {
-  font-size: 1.2rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
   font-weight: 300;
 }
 main .content .content-detail button {
   border: none;
   border-radius: 50px;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
   color: white;
   cursor: pointer;
 }
@@ -66,22 +67,23 @@ main .content .content-detail .tombol {
   padding-top: 2rem;
 }
 main .content .content-detail .tombol .button-buy {
-  padding: 1.1rem 2rem;
+  padding: 0.5rem 2rem;
   background-color: black;
-  margin-right: 1rem;
+  margin-right: 0.6rem;
 }
 main .content .content-detail .tombol .button-explore {
-  padding: 1rem 1.5rem;
+  padding: 0.4rem 1.3rem;
   background-color: transparent;
   border: 1px white solid;
 }
 main .content img {
-  left: 700px;
+  left: 580px;
+  bottom: -15px;
   position: absolute;
-  width: 45%;
+  width: 47%;
 }
 main aside {
-  width: 300px;
+  width: 200px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: white;
@@ -101,15 +103,19 @@ main aside .doctor img {
 }
 main aside .doctor .nama {
   font-weight: bold;
+  font-size: 0.9rem;
+}
+main aside .doctor .spesialis {
+  margin-top: -1rem;
+  font-size: 0.8rem;
 }
 main aside .doctor .tombol-konsul {
   border: none;
   border-radius: 50px;
-  padding: 1rem 2rem;
+  padding: 0.7rem 1.3rem;
   background-color: #e0a25a;
   color: white;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 main aside .doctor .tombol-konsul:hover {
@@ -117,7 +123,10 @@ main aside .doctor .tombol-konsul:hover {
 }
 
 #about {
-  margin-top: 5rem;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-around;
+  height: 80vh;
   font-family: "Poppins", serif;
   margin-left: 8rem;
 }
@@ -128,18 +137,20 @@ main aside .doctor .tombol-konsul:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 20%;
-  margin-left: 1rem;
+  width: 30%;
 }
 #about .content-about .about-detail h1 {
-  font-size: 2rem;
+  font-size: 1.7rem;
+}
+#about .content-about .about-detail p {
+  font-size: 0.9rem;
 }
 #about .content-about .about-detail i {
   background-color: #e0a25a;
   color: white;
   border: none;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 1rem;
   border-radius: 40%;
 }
@@ -151,7 +162,7 @@ main aside .doctor .tombol-konsul:hover {
 }
 #about .content-about .cards-pet .card-pet-list .list {
   width: 50%;
-  height: 500px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,12 +182,12 @@ main aside .doctor .tombol-konsul:hover {
   width: 70%;
 }
 #about .content-about .cards-pet .card-pet-list .list p {
+  font-size: 0.9rem;
   font-weight: bold;
 }
 #about .content-about .cards-pet .card-pet-list .list button {
-  padding: 1rem;
-  font-weight: bold;
-  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
   background-color: #e0a25a;
   color: white;
   cursor: pointer;
@@ -187,16 +198,14 @@ main aside .doctor .tombol-konsul:hover {
   background-color: #b9874d;
 }
 
-.article {
-  padding-top: 5rem;
-}
 .article article h1 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   text-align: center;
 }
 .article article .detail-article {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 8rem;
   padding-top: 2rem;
   gap: 3rem;
@@ -209,10 +218,11 @@ main aside .doctor .tombol-konsul:hover {
 }
 .article article .detail-article .deskripsi-article p {
   text-align: justify;
-  line-height: 1.7rem;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
 }
 .article article .detail-article .thumbnail-article {
-  width: 40%;
+  width: 35%;
 }
 .article article .detail-article .thumbnail-article img {
   width: 100%;
@@ -221,17 +231,17 @@ main aside .doctor .tombol-konsul:hover {
 
 #Contact {
   margin: 0 8rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 3rem;
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
   background-color: #e0a25a;
   border-radius: 20px;
   color: white;
 }
 #Contact h1 {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 #Contact .container {
   display: flex;
@@ -252,14 +262,14 @@ main aside .doctor .tombol-konsul:hover {
   align-items: center;
 }
 #Contact .container .form-grup label {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 #Contact .container .form-grup input {
   width: 30rem;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   margin-bottom: 0.6rem;
   margin-top: 0.6rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   border-radius: 10px;
   border: none;
 }
@@ -268,12 +278,13 @@ main aside .doctor .tombol-konsul:hover {
   border-radius: 10px;
   padding: 1rem 0.5rem;
   width: 30rem;
+  height: 4rem;
 }
 #Contact .container .form-grup button {
   width: 100%;
   padding: 0.5rem;
   border-radius: 10px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   border: none;
   margin-top: 1rem;
@@ -284,6 +295,7 @@ footer {
   text-align: center;
   background-color: #e0a25a;
   color: white;
+  font-size: 0.8rem;
 }
 footer a {
   text-decoration: none;

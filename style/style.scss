@@ -4,6 +4,8 @@
     // border: 1px solid red;
     // box-sizing: border-box;
     font-family: "Poppins", serif;
+
+    scroll-behavior: smooth;
 }
 
 header {
@@ -17,7 +19,7 @@ header {
         h3 {
             font-family: "Pacifico", sans-serif;
             font-weight: 400;
-            font-size: 1.7em;
+            font-size: 1.3em;
             color: white;
         }
     }
@@ -33,7 +35,7 @@ header {
                 a {
                     color: white;
                     font-family: "Poppins", sans-serif;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     text-decoration: none;
                 }
             }
@@ -44,7 +46,7 @@ header {
 main {
     font-family: "Poppins", serif;
     background-color: #e0a25a;
-    height: 90vh;
+    height: 76vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,25 +57,26 @@ main {
     .content {
         display: flex;
         align-items: center;
-        // justify-content: space-between;
 
         .content-detail {
+            // margin-top: 2rem;
             width: 65%;
 
             h3 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             p {
-                font-size: 1.2rem;
+                padding-top: 1rem;
+                font-size: 0.9rem;
                 font-weight: 300;
             }
 
             button {
                 border: none;
                 border-radius: 50px;
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 0.9rem;
+                // font-weight: bold;
                 color: white;
 
                 cursor: pointer;
@@ -83,13 +86,13 @@ main {
                 padding-top: 2rem;
 
                 .button-buy {
-                    padding: 1.1rem 2rem;
+                    padding: 0.5rem 2rem;
                     background-color: black;
-                    margin-right: 1rem;
+                    margin-right: 0.6rem;
                 }
 
                 .button-explore {
-                    padding: 1rem 1.5rem;
+                    padding: 0.4rem 1.3rem;
                     background-color: transparent;
                     border: 1px white solid;
                 }
@@ -97,14 +100,15 @@ main {
         }
 
         img {
-            left: 700px;
+            left: 580px;
+            bottom: -15px;
             position: absolute;
-            width: 45%;
+            width: 47%;
         }
     }
 
     aside {
-        width: 300px;
+        width: 200px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         background-color: white;
@@ -126,17 +130,22 @@ main {
 
             .nama {
                 font-weight: bold;
+                font-size: 0.9rem;
+            }
+
+            .spesialis {
+                margin-top: -1rem;
+                font-size: 0.8rem;
             }
 
             .tombol-konsul {
                 border: none;
                 border-radius: 50px;
-                padding: 1rem 2rem;
+                padding: 0.7rem 1.3rem;
 
                 background-color: #e0a25a;
                 color: white;
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 0.8rem;
                 cursor: pointer;
 
                 &:hover {
@@ -148,8 +157,10 @@ main {
 }
 
 #about {
-    margin-top: 5rem;
-
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-around;
+    height: 80vh;
     font-family: "Poppins", serif;
     margin-left: 8rem;
 
@@ -161,12 +172,16 @@ main {
             flex-direction: column;
             gap: 2rem;
 
-            width: 20%;
+            width: 30%;
 
-            margin-left: 1rem;
+            // margin-left: 1rem;
 
             h1 {
-                font-size: 2rem;
+                font-size: 1.7rem;
+            }
+
+            p {
+                font-size: 0.9rem;
             }
 
             i {
@@ -175,7 +190,7 @@ main {
                 border: none;
                 cursor: pointer;
 
-                font-size: 2rem;
+                font-size: 1rem;
                 padding: 1rem;
                 border-radius: 40%;
 
@@ -191,7 +206,7 @@ main {
 
                 .list {
                     width: 50%;
-                    height: 500px;
+                    height: 450px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -211,20 +226,19 @@ main {
 
                         img {
                             width: 70%;
-                            // object-fit: cover; // Membuat gambar proporsional dan di tengah
-                            // width: 100%; // Ukuran gambar yang sama
-                            // height: 100%; // Ukuran gambar yang sama
                         }
                     }
 
                     p {
+                        font-size: 0.9rem;
                         font-weight: bold;
+
                     }
 
                     button {
-                        padding: 1rem;
-                        font-weight: bold;
-                        font-size: 0.9rem;
+                        padding: 0.5rem 1rem;
+                        // font-weight: bold;
+                        font-size: 0.8rem;
 
                         background-color: #e0a25a;
                         color: white;
@@ -244,18 +258,18 @@ main {
 }
 
 .article {
-    padding-top: 5rem;
+    // padding-top: 5rem;
 
     article {
         h1 {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             text-align: center;
         }
 
         .detail-article {
             display: flex;
             justify-content: space-between;
-            // align-items: center;
+            align-items: center;
             padding: 0 8rem;
             padding-top: 2rem;
             gap: 3rem;
@@ -269,12 +283,13 @@ main {
 
                 p {
                     text-align: justify;
-                    line-height: 1.7rem;
+                    font-size: 0.8rem;
+                    line-height: 1.5rem;
                 }
             }
 
             .thumbnail-article {
-                width: 40%;
+                width: 35%;
 
                 img {
                     width: 100%;
@@ -287,10 +302,10 @@ main {
 
 #Contact {
     margin: 0 8rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
     background-color: #e0a25a;
     border-radius: 20px;
 
@@ -298,15 +313,13 @@ main {
 
     h1 {
         text-align: center;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .container {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        // margin: auto;
-        // border: 1px solid black;
         padding-top: 2rem;
 
         .thumbnail-contact {
@@ -327,15 +340,15 @@ main {
             align-items: center;
 
             label {
-                font-size: 1.2rem;
+                font-size: 0.9rem;
             }
 
             input {
                 width: 30rem;
-                padding: 1rem 0.5rem;
+                padding: 0.5rem 0.5rem;
                 margin-bottom: 0.6rem;
                 margin-top: 0.6rem;
-                font-size: 0.9rem;
+                font-size: 0.8rem;
 
                 border-radius: 10px;
                 border: none;
@@ -346,13 +359,14 @@ main {
                 border-radius: 10px;
                 padding: 1rem 0.5rem;
                 width: 30rem;
+                height: 4rem;
             }
 
             button {
                 width: 100%;
                 padding: 0.5rem;
                 border-radius: 10px;
-                font-size: 1.1rem;
+                font-size: 1rem;
                 cursor: pointer;
                 border: none;
 
@@ -367,6 +381,7 @@ footer {
     text-align: center;
     background-color: #e0a25a;
     color: white;
+    font-size: 0.8rem;
 
     a {
         text-decoration: none;
