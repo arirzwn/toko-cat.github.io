@@ -4,16 +4,13 @@
     // border: 1px solid red;
     // box-sizing: border-box;
     font-family: "Poppins", serif;
-
-    scroll-behavior: smooth;
 }
+
+
 
 header {
     background-color: #e0a25a;
-
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 8rem;
+    width: 100%;
 
     .logo {
         h3 {
@@ -25,6 +22,13 @@ header {
     }
 
     .nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 80%;
+
+
         ul {
             display: flex;
             gap: 4rem;
@@ -34,7 +38,6 @@ header {
 
                 a {
                     color: white;
-                    font-family: "Poppins", sans-serif;
                     font-size: 1rem;
                     text-decoration: none;
                 }
@@ -44,22 +47,27 @@ header {
 }
 
 main {
-    font-family: "Poppins", serif;
-    background-color: #e0a25a;
-    height: 76vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 8rem;
+    .wrapper {
+        width: 100%;
+        display: flex;
+        height: 76vh;
+        align-items: center;
+        font-family: "Poppins", serif;
+        background-color: #e0a25a;
 
-    color: white;
+        color: white;
+
+        justify-content: space-around;
+    }
 
     .content {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        // position: relative;
+        width: 80%;
 
         .content-detail {
-            // margin-top: 2rem;
             width: 65%;
 
             h3 {
@@ -99,15 +107,17 @@ main {
             }
         }
 
-        img {
-            left: 580px;
-            bottom: -15px;
-            position: absolute;
+        .image-container {
+            // left: 580px;
+            // bottom: -15px;
+            // position: absolute;
             width: 47%;
         }
     }
 
     aside {
+        position: fixed;
+        right: 0;
         width: 200px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
@@ -386,5 +396,37 @@ footer {
     a {
         text-decoration: none;
         color: white;
+    }
+}
+
+
+// Tab
+@media screen and (max-width: 768px) {
+    header {
+        .logo {
+            h3 {
+                font-size: 1.8rem;
+            }
+
+        }
+
+        .nav-list {
+            flex-direction: column;
+        }
+    }
+
+    main {
+        position: relative;
+
+        .content {
+            .image-container {
+                position: absolute;
+
+                img {
+
+                    width: 100%;
+                }
+            }
+        }
     }
 }
