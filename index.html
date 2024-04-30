@@ -26,8 +26,19 @@
 
 <body>
     <header class="navbar-container">
-
         <nav class="nav-list">
+            <ul class="sidebar">
+                <li>
+                    <i class="fa-regular fa-x fa-xl" onclick=closeSideBar()></i>
+
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#">Cats</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+
             <div class="logo">
                 <h3>Toko Cat</h3>
             </div>
@@ -38,6 +49,7 @@
                 <li><a href="#">Article</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
+            <i class="icon-bar fa-solid fa-bars fa-xl" onclick=showSideBar()></i>
         </nav>
     </header>
 
@@ -63,21 +75,17 @@
                 <div class="image-container">
                     <img src="assets/kucing-home.png" alt="Gambar kucing" />
                 </div>
-
             </div>
 
             <aside>
                 <div class="doctor">
                     <img src="assets/Profile.jpg" alt="Foto Profile" />
                     <p class="nama">Ari Rizwan</p>
-
                     <p class="spesialis">Spesialis Kucing</p>
-
                     <button class="tombol-konsul">Konsultasi</button>
                 </div>
             </aside>
         </div>
-
     </main>
 
     <section id="about">
@@ -100,7 +108,7 @@
                 <div class="card-pet-list">
                     <div class="list">
                         <div class="gambar">
-                            <img src="assets/kucing.png " alt="Gambar kucing" />
+                            <img src="assets/kucing.png " alt="Gambar kucing" draggable="false" />
                         </div>
                         <p>Kucing Oren</p>
                         <p class="harga">Rp. 300.000</p>
@@ -108,7 +116,7 @@
                     </div>
                     <div class="list">
                         <div class="gambar">
-                            <img src="assets/kucing2.png " alt="Gambar kucing" />
+                            <img src="assets/kucing2.png " alt="Gambar kucing" draggable="false" />
                         </div>
                         <p>Kucing Oren</p>
                         <p class="harga">Rp. 200.000</p>
@@ -116,7 +124,7 @@
                     </div>
                     <div class="list">
                         <div class="gambar">
-                            <img src="assets/kucing3.png " alt="Gambar kucing" />
+                            <img src="assets/kucing3.png " alt="Gambar kucing" draggable="false" />
                         </div>
                         <p>Kucing Oren</p>
                         <p class="harga">Rp. 350.000</p>
@@ -163,22 +171,24 @@
     </section>
 
     <section id="Contact">
-        <h1>Contact Us</h1>
-        <div class="container">
-            <div class="thumbnail-contact">
-                <img src="assets/kucing-telepon.jpg" alt="Gambar Kucing Telepon">
-            </div>
+        <div class="wrapper">
+            <h1>Contact Us</h1>
+            <div class="container">
+                <div class="thumbnail-contact">
+                    <img src="assets/kucing-telepon.jpg" alt="Gambar Kucing Telepon">
+                </div>
 
-            <div class="form-grup">
-                <form action="#">
-                    <label for="nama">Nama</label><br>
-                    <input type="text" name="nama" id="nama" placeholder="Masukan nama...."><br>
-                    <label for="email">Email</label><br>
-                    <input type="email" name="email" id="email " placeholder="Email@mail.com"><br>
-                    <label for="pesan">Pesan</label><br>
-                    <textarea name="pesan" id="pesan" cols="30" rows="10" placeholder="Masukan pesan..."></textarea>
-                </form>
-                <button>Kirim</button>
+                <div class="form-grup">
+                    <form action="#">
+                        <label for="nama">Nama</label><br>
+                        <input type="text" name="nama" id="nama" placeholder="Masukan nama...."><br>
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" id="email " placeholder="Email@mail.com"><br>
+                        <label for="pesan">Pesan</label><br>
+                        <textarea name="pesan" id="pesan" cols="30" rows="10" placeholder="Masukan pesan..."></textarea>
+                    </form>
+                    <button>Kirim</button>
+                </div>
             </div>
         </div>
     </section>
@@ -187,6 +197,9 @@
         Made with 🧡 by
         <a href="https://github.com/arirzwn" target="_blank">Ari Rzwn</a>
     </footer>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
