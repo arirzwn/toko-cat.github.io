@@ -1,9 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", serif;
     // border: 1px solid red;
     // box-sizing: border-box;
-    font-family: "Poppins", serif;
 }
 
 .navbar-container {
@@ -181,6 +181,7 @@ main {
 
     .content-about {
         display: flex;
+        justify-content: space-between;
         width: 80%;
         margin: 0 auto;
 
@@ -188,7 +189,7 @@ main {
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            width: 30%;
+            width: 40%;
 
             h1 {
                 font-size: 1.7rem;
@@ -217,27 +218,42 @@ main {
             .card-pet-list {
                 display: flex;
 
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                &.dragging {
+                    scroll-snap-type: none;
+                    scroll-behavior: auto;
+
+                    .list {
+                        cursor: grab;
+                        user-select: none;
+                    }
+                }
+
                 .list {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 1.5rem;
                     padding-bottom: 1rem;
 
                     &:hover {
                         background-color: rgb(230, 230, 230);
                     }
 
-                    .gambar {
-                        padding-top: 1rem;
-                        height: 50%;
-                        text-align: center;
-                        overflow: hidden;
+                    figcaption {
+                        margin-top: 1rem;
+                        display: flex;
+                        gap: 0.5rem;
+                        flex-direction: column;
+                        align-items: center;
+                    }
 
-                        img {
-                            width: 70%;
-                        }
+                    img {
+                        height: 200px;
+                        width: 200px;
                     }
 
                     p {
@@ -280,10 +296,10 @@ main {
             justify-content: space-around;
             align-items: center;
             padding-top: 2rem;
-            gap: 3rem;
+            gap: 2rem;
 
             .deskripsi-article {
-                width: 60%;
+                width: 100%;
 
                 h2 {
                     color: #e0a25a;
@@ -297,11 +313,12 @@ main {
             }
 
             .thumbnail-article {
-                width: 35%;
+                text-align: center;
+                width: 70%;
 
                 img {
-                    width: 100%;
                     border-radius: 20px;
+                    width: 100%;
                 }
             }
         }
@@ -347,31 +364,36 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                width: 40%;
 
-                label {
-                    font-size: 0.9rem;
-                }
+                form {
+                    width: 100%;
 
-                input {
-                    width: 30rem;
-                    padding: 0.5rem 0.5rem;
-                    margin-bottom: 0.6rem;
-                    margin-top: 0.6rem;
-                    font-size: 0.8rem;
-                    border-radius: 10px;
-                    border: none;
-                }
+                    label {
+                        font-size: 0.9rem;
+                    }
 
-                textarea {
-                    margin-top: 0.6rem;
-                    border-radius: 10px;
-                    padding: 1rem 0.5rem;
-                    width: 30rem;
-                    height: 4rem;
+                    input {
+                        width: 100%;
+                        padding: 0.5rem 0.5rem;
+                        margin-bottom: 0.6rem;
+                        margin-top: 0.6rem;
+                        font-size: 0.8rem;
+                        border-radius: 10px;
+                        border: none;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        margin-top: 0.6rem;
+                        border-radius: 10px;
+                        padding: 1rem 0.5rem;
+                        height: 4rem;
+                    }
                 }
 
                 button {
-                    width: 100%;
+                    width: 50%;
                     padding: 0.5rem;
                     border-radius: 10px;
                     font-size: 1rem;
@@ -412,11 +434,14 @@ footer {
     }
 
     main {
+        // margin-top: 5rem;
         height: 70vh;
 
         .wrapper {
             // display: flex;
-            align-items: center;
+            // align-items: center;
+            padding-top: 8rem;
+
 
             .content {
                 display: flex;
@@ -427,6 +452,13 @@ footer {
                     align-content: center;
                     flex-direction: column;
                 }
+
+                .image-container {
+                    img {
+                        width: 100%;
+                    }
+                }
+
             }
         }
     }
@@ -463,14 +495,26 @@ footer {
             .detail-article {
                 gap: 0;
             }
+
+            .thumbnail-article {
+                display: none;
+            }
         }
     }
 
     #Contact {
-        .wrapper {
-            .container {
-                .thumbnail-contact {
-                    display: none;
+        .container {
+            // width: 100%;
+
+            .thumbnail-contact {
+                display: none;
+            }
+
+            .form-grup {
+                width: 300px;
+
+                form {
+                    min-width: 500px;
                 }
             }
         }
@@ -538,27 +582,47 @@ footer {
             }
 
             .cards-pet {
+                margin-top: 1rem;
 
                 .card-pet-list {
                     overflow: hidden;
+                    align-items: center;
                     gap: 2rem;
                     scroll-behavior: smooth;
-
-
-                    .list {
-                        width: 100%;
-
-                        /* Sembunyikan semua list pada breakpoint 576px */
-                        .gambar {
-                            img {
-                                width: 100%;
-                            }
-                        }
-                    }
                 }
             }
         }
     }
 
+    .article {
+        .detail-article {
+            width: 100%;
 
+            .deskripsi-article {
+                width: 100%;
+            }
+
+            .thumbnail-article {
+                display: none;
+            }
+        }
+    }
+
+    #Contact {
+        .container {
+            // width: 100%;
+
+            .thumbnail-contact {
+                display: none;
+            }
+
+            .form-grup {
+                width: 300px;
+
+                form {
+                    min-width: 300px;
+                }
+            }
+        }
+    }
 }

@@ -149,6 +149,7 @@ main .wrapper aside .doctor .tombol-konsul:hover {
 }
 #about .content-about {
   display: flex;
+  justify-content: space-between;
   width: 80%;
   margin: 0 auto;
 }
@@ -156,7 +157,7 @@ main .wrapper aside .doctor .tombol-konsul:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 30%;
+  width: 40%;
 }
 #about .content-about .about-detail h1 {
   font-size: 1.7rem;
@@ -179,25 +180,39 @@ main .wrapper aside .doctor .tombol-konsul:hover {
 #about .content-about .cards-pet .card-pet-list {
   display: flex;
 }
+#about .content-about .cards-pet .card-pet-list::-webkit-scrollbar {
+  display: none;
+}
+#about .content-about .cards-pet .card-pet-list.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+#about .content-about .cards-pet .card-pet-list.dragging .list {
+  cursor: grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 #about .content-about .cards-pet .card-pet-list .list {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
   padding-bottom: 1rem;
 }
 #about .content-about .cards-pet .card-pet-list .list:hover {
   background-color: rgb(230, 230, 230);
 }
-#about .content-about .cards-pet .card-pet-list .list .gambar {
-  padding-top: 1rem;
-  height: 50%;
-  text-align: center;
-  overflow: hidden;
+#about .content-about .cards-pet .card-pet-list .list figcaption {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
 }
-#about .content-about .cards-pet .card-pet-list .list .gambar img {
-  width: 70%;
+#about .content-about .cards-pet .card-pet-list .list img {
+  height: 200px;
+  width: 200px;
 }
 #about .content-about .cards-pet .card-pet-list .list p {
   font-size: 0.9rem;
@@ -230,10 +245,10 @@ main .wrapper aside .doctor .tombol-konsul:hover {
   justify-content: space-around;
   align-items: center;
   padding-top: 2rem;
-  gap: 3rem;
+  gap: 2rem;
 }
 .article article .detail-article .deskripsi-article {
-  width: 60%;
+  width: 100%;
 }
 .article article .detail-article .deskripsi-article h2 {
   color: #e0a25a;
@@ -244,11 +259,12 @@ main .wrapper aside .doctor .tombol-konsul:hover {
   line-height: 1.5rem;
 }
 .article article .detail-article .thumbnail-article {
-  width: 35%;
+  text-align: center;
+  width: 70%;
 }
 .article article .detail-article .thumbnail-article img {
-  width: 100%;
   border-radius: 20px;
+  width: 100%;
 }
 
 #Contact {
@@ -285,12 +301,16 @@ main .wrapper aside .doctor .tombol-konsul:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40%;
 }
-#Contact .wrapper .container .form-grup label {
+#Contact .wrapper .container .form-grup form {
+  width: 100%;
+}
+#Contact .wrapper .container .form-grup form label {
   font-size: 0.9rem;
 }
-#Contact .wrapper .container .form-grup input {
-  width: 30rem;
+#Contact .wrapper .container .form-grup form input {
+  width: 100%;
   padding: 0.5rem 0.5rem;
   margin-bottom: 0.6rem;
   margin-top: 0.6rem;
@@ -298,15 +318,15 @@ main .wrapper aside .doctor .tombol-konsul:hover {
   border-radius: 10px;
   border: none;
 }
-#Contact .wrapper .container .form-grup textarea {
+#Contact .wrapper .container .form-grup form textarea {
+  width: 100%;
   margin-top: 0.6rem;
   border-radius: 10px;
   padding: 1rem 0.5rem;
-  width: 30rem;
   height: 4rem;
 }
 #Contact .wrapper .container .form-grup button {
-  width: 100%;
+  width: 50%;
   padding: 0.5rem;
   border-radius: 10px;
   font-size: 1rem;
@@ -338,7 +358,7 @@ footer a {
     height: 70vh;
   }
   main .wrapper {
-    align-items: center;
+    padding-top: 8rem;
   }
   main .wrapper .content {
     display: flex;
@@ -348,6 +368,9 @@ footer a {
     display: flex;
     align-content: center;
     flex-direction: column;
+  }
+  main .wrapper .content .image-container img {
+    width: 100%;
   }
   #about .content-about .about-detail {
     width: 100%;
@@ -368,8 +391,17 @@ footer a {
   .article article .detail-article {
     gap: 0;
   }
-  #Contact .wrapper .container .thumbnail-contact {
+  .article article .thumbnail-article {
     display: none;
+  }
+  #Contact .container .thumbnail-contact {
+    display: none;
+  }
+  #Contact .container .form-grup {
+    width: 300px;
+  }
+  #Contact .container .form-grup form {
+    min-width: 500px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -409,16 +441,31 @@ footer a {
   #about .content-about .about-detail {
     width: 100%;
   }
+  #about .content-about .cards-pet {
+    margin-top: 1rem;
+  }
   #about .content-about .cards-pet .card-pet-list {
     overflow: hidden;
+    align-items: center;
     gap: 2rem;
     scroll-behavior: smooth;
   }
-  #about .content-about .cards-pet .card-pet-list .list {
+  .article .detail-article {
     width: 100%;
-    /* Sembunyikan semua list pada breakpoint 576px */
   }
-  #about .content-about .cards-pet .card-pet-list .list .gambar img {
+  .article .detail-article .deskripsi-article {
     width: 100%;
+  }
+  .article .detail-article .thumbnail-article {
+    display: none;
+  }
+  #Contact .container .thumbnail-contact {
+    display: none;
+  }
+  #Contact .container .form-grup {
+    width: 300px;
+  }
+  #Contact .container .form-grup form {
+    min-width: 300px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,11 +1,28 @@
-function showSideBar() {
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
+const carousel = document.querySelector(".card-pet-list")
+
+let isDragging = false, startX, startScrollLeft;
+
+const dragStart = e => {
+    isDragging = true;
+    carousel.classList.add("dragging")
+
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+    if (!isDragging) return;
+    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
 
 }
 
-function closeSideBar() {
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
-
+const dragStop = e => {
+    isDragging = false;
+    carousel.classList.remove("dragging")
 }
+
+
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
