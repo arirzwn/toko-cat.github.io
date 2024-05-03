@@ -55,60 +55,62 @@
 
 main {
   width: 100%;
-  height: 76vh;
-  background-color: #e0a25a;
   font-family: "Poppins", serif;
   color: white;
 }
-main .wrapper {
+main .container {
+  background-color: #e0a25a;
+}
+main .container .wrapper {
+  height: 80vh;
   width: 80%;
   margin: 0 auto;
   display: flex;
   align-items: center;
 }
-main .wrapper .content {
+main .container .wrapper .content {
   display: flex;
   align-items: center;
 }
-main .wrapper .content .content-detail {
+main .container .wrapper .content .content-detail {
   width: 80%;
 }
-main .wrapper .content .content-detail h3 {
+main .container .wrapper .content .content-detail h3 {
   font-size: 2.5rem;
 }
-main .wrapper .content .content-detail p {
+main .container .wrapper .content .content-detail p {
   padding-top: 1rem;
   font-size: 0.9rem;
   font-weight: 300;
 }
-main .wrapper .content .content-detail button {
+main .container .wrapper .content .content-detail button {
   border: none;
   border-radius: 50px;
   font-size: 0.9rem;
   color: white;
   cursor: pointer;
 }
-main .wrapper .content .content-detail .tombol {
+main .container .wrapper .content .content-detail .tombol {
   padding-top: 2rem;
   display: flex;
 }
-main .wrapper .content .content-detail .tombol .button-buy {
+main .container .wrapper .content .content-detail .tombol .button-buy {
   padding: 0.5rem 2rem;
   background-color: black;
   margin-right: 0.6rem;
 }
-main .wrapper .content .content-detail .tombol .button-explore {
+main .container .wrapper .content .content-detail .tombol .button-explore {
   padding: 0.4rem 1.3rem;
   background-color: transparent;
   border: 1px white solid;
 }
-main .wrapper aside {
+main .container .wrapper aside {
   position: absolute;
   right: 0;
   max-width: 40%;
   color: black;
 }
-main .wrapper aside .doctor {
+main .container .wrapper aside .doctor {
   border-radius: 10px 0 0 10px;
   padding: 1rem;
   background-color: white;
@@ -117,18 +119,18 @@ main .wrapper aside .doctor {
   gap: 1.3rem;
   align-items: center;
 }
-main .wrapper aside .doctor img {
+main .container .wrapper aside .doctor img {
   width: 100px;
 }
-main .wrapper aside .doctor .nama {
+main .container .wrapper aside .doctor .nama {
   font-weight: bold;
   font-size: 0.9rem;
 }
-main .wrapper aside .doctor .spesialis {
+main .container .wrapper aside .doctor .spesialis {
   margin-top: -1rem;
   font-size: 0.8rem;
 }
-main .wrapper aside .doctor .tombol-konsul {
+main .container .wrapper aside .doctor .tombol-konsul {
   border: none;
   border-radius: 50px;
   padding: 0.7rem 1.3rem;
@@ -137,35 +139,35 @@ main .wrapper aside .doctor .tombol-konsul {
   font-size: 0.8rem;
   cursor: pointer;
 }
-main .wrapper aside .doctor .tombol-konsul:hover {
+main .container .wrapper aside .doctor .tombol-konsul:hover {
   background-color: #b9874d;
 }
-
-#about {
+main #about {
+  color: black;
   width: 100%;
   font-family: "Poppins", serif;
   margin-top: 8rem;
   display: flex;
 }
-#about .content-about {
+main #about .content-about {
   display: flex;
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
 }
-#about .content-about .about-detail {
+main #about .content-about .about-detail {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 40%;
 }
-#about .content-about .about-detail h1 {
+main #about .content-about .about-detail h1 {
   font-size: 1.7rem;
 }
-#about .content-about .about-detail p {
+main #about .content-about .about-detail p {
   font-size: 0.9rem;
 }
-#about .content-about .about-detail i {
+main #about .content-about .about-detail i {
   background-color: #e0a25a;
   color: white;
   border: none;
@@ -174,51 +176,51 @@ main .wrapper aside .doctor .tombol-konsul:hover {
   padding: 1rem;
   border-radius: 40%;
 }
-#about .content-about .about-detail i:hover {
+main #about .content-about .about-detail i:hover {
   background-color: #b9874d;
 }
-#about .content-about .cards-pet .card-pet-list {
+main #about .content-about .cards-pet .card-pet-list {
   display: flex;
 }
-#about .content-about .cards-pet .card-pet-list::-webkit-scrollbar {
+main #about .content-about .cards-pet .card-pet-list::-webkit-scrollbar {
   display: none;
 }
-#about .content-about .cards-pet .card-pet-list.dragging {
+main #about .content-about .cards-pet .card-pet-list.dragging {
   scroll-snap-type: none;
   scroll-behavior: auto;
 }
-#about .content-about .cards-pet .card-pet-list.dragging .list {
+main #about .content-about .cards-pet .card-pet-list.dragging .list {
   cursor: grab;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-#about .content-about .cards-pet .card-pet-list .list {
+main #about .content-about .cards-pet .card-pet-list .list {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 1rem;
 }
-#about .content-about .cards-pet .card-pet-list .list:hover {
+main #about .content-about .cards-pet .card-pet-list .list:hover {
   background-color: rgb(230, 230, 230);
 }
-#about .content-about .cards-pet .card-pet-list .list figcaption {
+main #about .content-about .cards-pet .card-pet-list .list figcaption {
   margin-top: 1rem;
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
   align-items: center;
 }
-#about .content-about .cards-pet .card-pet-list .list img {
+main #about .content-about .cards-pet .card-pet-list .list img {
   height: 200px;
   width: 200px;
 }
-#about .content-about .cards-pet .card-pet-list .list p {
+main #about .content-about .cards-pet .card-pet-list .list p {
   font-size: 0.9rem;
   font-weight: bold;
 }
-#about .content-about .cards-pet .card-pet-list .list button {
+main #about .content-about .cards-pet .card-pet-list .list button {
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
   background-color: #e0a25a;
@@ -227,18 +229,17 @@ main .wrapper aside .doctor .tombol-konsul:hover {
   border-radius: 50px;
   border: none;
 }
-#about .content-about .cards-pet .card-pet-list .list button:hover {
+main #about .content-about .cards-pet .card-pet-list .list button:hover {
   background-color: #b9874d;
 }
-
-.article article {
+main .article article {
   width: 100%;
 }
-.article article h1 {
+main .article article h1 {
   font-size: 1.7rem;
   text-align: center;
 }
-.article article .detail-article {
+main .article article .detail-article {
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -247,69 +248,69 @@ main .wrapper aside .doctor .tombol-konsul:hover {
   padding-top: 2rem;
   gap: 2rem;
 }
-.article article .detail-article .deskripsi-article {
+main .article article .detail-article .deskripsi-article {
   width: 100%;
 }
-.article article .detail-article .deskripsi-article h2 {
+main .article article .detail-article .deskripsi-article h2 {
   color: #e0a25a;
 }
-.article article .detail-article .deskripsi-article p {
+main .article article .detail-article .deskripsi-article p {
+  color: black;
   text-align: justify;
   font-size: 0.8rem;
   line-height: 1.5rem;
 }
-.article article .detail-article .thumbnail-article {
+main .article article .detail-article .thumbnail-article {
   text-align: center;
   width: 70%;
 }
-.article article .detail-article .thumbnail-article img {
+main .article article .detail-article .thumbnail-article img {
   border-radius: 20px;
   width: 100%;
 }
-
-#Contact {
+main #Contact {
   width: 100%;
   color: white;
   margin: 2rem 0 2rem;
 }
-#Contact .wrapper {
+main #Contact .wrapper {
   padding: 1rem 0 2rem;
   border-radius: 20px;
   background-color: #e0a25a;
   width: 80%;
   margin: 0 auto;
 }
-#Contact .wrapper h1 {
+main #Contact .wrapper h1 {
   text-align: center;
   font-size: 1.5rem;
 }
-#Contact .wrapper .container {
+main #Contact .wrapper .container {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-top: 2rem;
 }
-#Contact .wrapper .container .thumbnail-contact {
+main #Contact .wrapper .container .thumbnail-contact {
   width: 37%;
 }
-#Contact .wrapper .container .thumbnail-contact img {
+main #Contact .wrapper .container .thumbnail-contact img {
   width: 100%;
   border-radius: 30px;
 }
-#Contact .wrapper .container .form-grup {
+main #Contact .wrapper .container .form-grup {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 40%;
 }
-#Contact .wrapper .container .form-grup form {
+main #Contact .wrapper .container .form-grup form {
   width: 100%;
 }
-#Contact .wrapper .container .form-grup form label {
+main #Contact .wrapper .container .form-grup form label {
   font-size: 0.9rem;
 }
-#Contact .wrapper .container .form-grup form input {
+main #Contact .wrapper .container .form-grup form input {
   width: 100%;
   padding: 0.5rem 0.5rem;
   margin-bottom: 0.6rem;
@@ -318,14 +319,14 @@ main .wrapper aside .doctor .tombol-konsul:hover {
   border-radius: 10px;
   border: none;
 }
-#Contact .wrapper .container .form-grup form textarea {
+main #Contact .wrapper .container .form-grup form textarea {
   width: 100%;
   margin-top: 0.6rem;
   border-radius: 10px;
   padding: 1rem 0.5rem;
   height: 4rem;
 }
-#Contact .wrapper .container .form-grup button {
+main #Contact .wrapper .container .form-grup button {
   width: 50%;
   padding: 0.5rem;
   border-radius: 10px;
@@ -354,9 +355,6 @@ footer a {
   .navbar-container .nav-list {
     flex-direction: column;
   }
-  main {
-    height: 70vh;
-  }
   main .wrapper {
     padding-top: 8rem;
   }
@@ -372,35 +370,35 @@ footer a {
   main .wrapper .content .image-container img {
     width: 100%;
   }
-  #about .content-about .about-detail {
+  main #about .content-about .about-detail {
     width: 100%;
     margin-right: 20px;
   }
-  #about .cards-pet {
+  main #about .cards-pet {
     width: 50%;
   }
-  #about .cards-pet .card-pet-list {
+  main #about .cards-pet .card-pet-list {
     width: 100%;
     gap: 1rem;
     flex-wrap: nowrap;
     overflow: hidden;
   }
-  #about .cards-pet .card-pet-list .list {
+  main #about .cards-pet .card-pet-list .list {
     gap: 0;
   }
-  .article article .detail-article {
+  main .article article .detail-article {
     gap: 0;
   }
-  .article article .thumbnail-article {
+  main .article article .thumbnail-article {
     display: none;
   }
-  #Contact .container .thumbnail-contact {
+  main #Contact .container .thumbnail-contact {
     display: none;
   }
-  #Contact .container .form-grup {
+  main #Contact .container .form-grup {
     width: 300px;
   }
-  #Contact .container .form-grup form {
+  main #Contact .container .form-grup form {
     min-width: 500px;
   }
 }
@@ -435,37 +433,37 @@ footer a {
   main .wrapper .content .image-container img {
     display: none;
   }
-  #about .content-about {
+  main #about .content-about {
     flex-direction: column;
   }
-  #about .content-about .about-detail {
+  main #about .content-about .about-detail {
     width: 100%;
   }
-  #about .content-about .cards-pet {
+  main #about .content-about .cards-pet {
     margin-top: 1rem;
   }
-  #about .content-about .cards-pet .card-pet-list {
+  main #about .content-about .cards-pet .card-pet-list {
     overflow: hidden;
     align-items: center;
     gap: 2rem;
     scroll-behavior: smooth;
   }
-  .article .detail-article {
+  main .article .detail-article {
     width: 100%;
   }
-  .article .detail-article .deskripsi-article {
+  main .article .detail-article .deskripsi-article {
     width: 100%;
   }
-  .article .detail-article .thumbnail-article {
+  main .article .detail-article .thumbnail-article {
     display: none;
   }
-  #Contact .container .thumbnail-contact {
+  main #Contact .container .thumbnail-contact {
     display: none;
   }
-  #Contact .container .form-grup {
+  main #Contact .container .form-grup {
     width: 300px;
   }
-  #Contact .container .form-grup form {
-    min-width: 300px;
+  main #Contact .container .form-grup form {
+    min-width: 250px;
   }
 }/*# sourceMappingURL=style.css.map */
